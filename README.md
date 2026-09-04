@@ -2,6 +2,8 @@
 
 **Direct motion in natural language. Keep every keyframe under your control.**
 
+**Live studio:** [glyph-motion.slate-app.online](https://glyph-motion.slate-app.online)
+
 Glyph Motion Studio is a visual GSAP editor that lets **your own browser agent** compose and animate vector scenes through [WebMCP](https://github.com/webmachinelearning/webmcp). The page registers ten typed site tools. The agent can safely switch among bundled workspaces, build a scene from primitives and bundled artwork, assign semantic roles and pivots, inspect animation targets ("the symbol", "all accents", "the wordmark"), and stage a validated GSAP timeline on the canvas you are looking at. The page keeps preview approval, validation, rendering, undo, reduced motion and saving. **No arbitrary generated code or markup is ever executed.**
 
 Extracted from a larger private Glyph Studio codebase as a small, self-contained public build.
@@ -48,6 +50,8 @@ pnpm build        # static build in ./build
 ```
 
 Node 20+. No backend, no accounts, no API keys: projects save to the browser's local storage.
+
+Pushes to `main` are verified and deployed as an atomic static release to the live studio. Nginx serves the generated `build/` directory directly; no application process runs on the server.
 
 ### Let an agent in
 
